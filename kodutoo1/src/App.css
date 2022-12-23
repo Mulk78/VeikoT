@@ -13,8 +13,6 @@
   color: blue;
   font-style: italic;
   text-align: center;
-}
-.nupp:active {
   cursor: grab;
 }
 .pilt {
