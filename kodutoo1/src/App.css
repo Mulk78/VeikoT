@@ -1,6 +1,6 @@
 .nupp {  
-  color: lightgrey;
-  background: green;
+  color: gray;
+  background: lightgreen;
   padding: 15px 32px;
   border: none;
   text-align: center;
@@ -16,6 +16,7 @@
   cursor: grab;
 }
 .pilt {
-width: 500px;
-height: 300px;
+  width: 50%;
+  height: 50%;
+
 }
