@@ -1,7 +1,10 @@
 
 function Kontakt () {
 return ( <div>
+    <br />
     <div>See on kontaktide leht, nähtav localhost:3000/kontakt aadressil</div>
+    
+    <br />
     <div>Võta meiega ühendust:</div>
     <br />
     <div>Kristiine Keskus</div>

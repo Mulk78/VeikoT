@@ -1,5 +1,5 @@
 import './App.css' ;
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import Avaleht from './pages/Avaleht';
 import Uudised from './pages/Uudised';
 import Meist from './pages/Meist';
@@ -8,23 +8,23 @@ import Kontakt from './pages/Kontakt';
 function App() {
   return (
     <div>
-      <link to="/">
+      <Link to="/">
         <button>Avalehele</button>
-      </link>
-      <link to="/uudised">
+      </Link>
+      <Link to="/uudised">
         <button>Uudiste lehele</button>
-      </link>
-      <link to="/kontakt">
+      </Link>
+      <Link to="/kontakt">
         <button>Võta meiega ühendust</button>
-      </link>
-      <link to="/meist">
+      </Link>
+      <Link to="/meist">
         <button>Info meist</button>
-      </link>
+      </Link>
       <Routes>        
-      <Route path=' ' element={<Avaleht/>}/>
-      <Route path='uudised' element={<Uudised/>}/>
-      <Route path='kontakt' element={<Kontakt/>}/>
-      <Route path='meist' element={<Meist/>}/>
+      <Route path='' element={ <Avaleht /> } />
+      <Route path='Uudised' element={ <Uudised /> } />
+      <Route path='Kontakt' element={ <Kontakt /> } />
+      <Route path='Meist' element={ <Meist /> } />
       </Routes>
     </div>
   );

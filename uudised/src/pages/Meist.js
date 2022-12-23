@@ -1,7 +1,10 @@
 
 function Meist() {
 return ( <div>
+    <br />
     <div>See on meist leht, nähtav localhost:3000/meist aadressil</div>
+    
+    <br />
     <div>Meie töötajad</div>
     <br />
     <div>Arvo Pärt</div>
