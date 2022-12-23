@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Link to="/">
-      <img className="pilt"src="https://www.scania.com/content/www/group/en/home/products-and-services/trucks/s-series/_jcr_content/root/responsivegrid/responsivegrid_copy/responsivegrid_816603832/responsivegrid/responsivegrid_copy/image.coreimg.90.992.jpeg/1583834851284.jpeg" alt="" />
+      <img className="pilt"src="https://www.luckydaycompetitions.com/wp-content/uploads/2022/04/image00004-3-1024x768.jpeg" alt="" />
       </Link>
       <Link to="/ostukorv">
       <button classname="nupp">Ostukorvi</button>
