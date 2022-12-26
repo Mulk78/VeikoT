@@ -11,15 +11,15 @@ function App() {
       <div className="rectangle"></div>
 
       <div className="navigation-pictures">
-        <Link className="main-link" to="work">
+        <Link className="main-link" to="Work">
          <img src="https://cdn.webshopapp.com/shops/76444/files/318214644/1024x1024x2/retro-3-spoke-steering-wheel-choose-your-options.jpg" alt="" />
         <p>Tööde lehele</p>
         </Link>
-        <Link className="main-link" to="hobbies">
+        <Link className="main-link" to="Hobbies">
         <img src="https://cdn.webshopapp.com/shops/76444/files/390807617/1024x1024x2/stainless-polished-exhaust-tip-129mm-with-seamed-e.jpg" alt="" />
         <p>Hobide lehele</p>
         </Link>
-        <Link classname="main-link" to="courses">
+        <Link classname="main-link" to="Courses">
         <img src="https://cdn.webshopapp.com/shops/76444/files/347347689/1024x1024x2/vivid-led-lightbar-with-2-colour-strobe-function.jpg" alt="" />
         <p>Kursuste lehele</p>
         </Link>
