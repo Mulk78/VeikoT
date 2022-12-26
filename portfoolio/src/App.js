@@ -24,12 +24,17 @@ function App() {
         <p>Kursuste lehele</p>
         </Link>
       </div>
-
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/NzRTdGUlZpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      <Routes>
       <Route path="work" element={ <Work/>} />
       <Route path="hobbies" element={ <Hobbies/>} />
       <Route path="courses" element={ <Courses/>} />
      </Routes>
+
+     <a className="facebook-button" href="https://www.facebook.com">
+     <img src="/facebook.png" alt="" />
+     <span>Facebook</span>
+     </a>
     </div>
   );
 }

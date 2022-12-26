@@ -27,7 +27,7 @@
 }
 .main-link {
 color: blue;
-background-color: darkgrey;
+background-color: lightgray;
 width: 300px;
 height: 200px;
 margin-top: 20px;  
@@ -38,4 +38,18 @@ text-decoration: none;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 display: flexbox;
 justify-content: space-between;
+}
+.facebook-button img {
+  height: 30px;
+  padding: 20px 10px;
+}
+.facebook-button:hover {
+  color: lightskyblue;
+  cursor: pointer;
+}
+.facebook-button span {
+  position: relative;
+  top: -30px;
+  height: 30px;
+  color: white;
 }
