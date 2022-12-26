@@ -4,6 +4,7 @@ function Hobbies() {
         <div>
             <Link to="/"><button>Tagasi</button></Link>
             <div>Hobide sisu</div>
+            <div>Tegin nuppude taustad halliks, et oleks paremini näha</div>
         </div>
     );
 }
