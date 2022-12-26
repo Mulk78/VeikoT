@@ -8,7 +8,7 @@ return ( <div>
     <div>Võta meiega ühendust:</div>
     <br />
     <div>Kristiine Keskus</div>
-    <div>1234456788</div>
+    <div>123786439645762</div>
     <div>Endla 45</div>
     <br />
     <div>Ülemiste Keskus</div>
