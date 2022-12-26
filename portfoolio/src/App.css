@@ -45,7 +45,7 @@ justify-content: space-between;
 }
 .facebook-button:hover {
   color: lightskyblue;
-  cursor: pointer;
+  cursor: crosshair;
 }
 .facebook-button span {
   position: relative;
