@@ -9,9 +9,9 @@
    }
 .nupp:hover {
   height: 50px;
-  font-size: 24px;
+  font-size: 16px;
   color: blue;
-  font-style: italic;
+  font-style: bold;
   text-align: center;
   cursor: grab;
 }

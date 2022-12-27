@@ -3,12 +3,13 @@ function Kontakt() {
 const [aadress, määraAadress]=useState("Tallinn")
 const [telefon, määraTelefon]=useState("53null6866null")
 const [email, määraEmail]=useState("on@olemas.ee")
+const [ingliseKeelne, määraIngliseKeelne]= useState("false");
 
-function English () {
-const [aadress, määraAadress]=useState("London")
-const [telefon, määraTelefon]=useState("53zero6866zero")
-const [email, määraEmail]=useState("on@olemas.co.uk")
-
+const English = () => {
+    määraAadress("London")
+    määraTelefon("53zero6866zero")
+    määraEmail("on@olemas.co.uk")
+    määraIngliseKeelne("true")
 }
     return ( 
     <div>
@@ -16,7 +17,8 @@ const [email, määraEmail]=useState("on@olemas.co.uk")
     <div>{aadress}</div>
     <div> {telefon} </div>
     <div> {email} </div><br />
-    <button onClick={()=> English ()}>Muuda inglise keelseks</button>
+    <button onClick={English} >English</button>
+    { ingliseKeelne == "true" && <div>In English <br /> Muutuja "võrdub-ei võrdu" käib ka läbi kahe võrdusmärgi</div> }
     </div> );
 }
 
