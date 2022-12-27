@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <button className='nupp'>VEIKO KODUTÖÖ 1</button>
-      <img className="pilt"src="https://www.luckydaycompetitions.com/wp-content/uploads/2022/04/image00004-3-1024x768.jpeg" alt="" />
+      <img className="main-picture"src="https://www.luckydaycompetitions.com/wp-content/uploads/2022/04/image00004-3-1024x768.jpeg" alt="" />
       <Link to="/"> <button>Avalehele</button></Link>
       <Link to="/meist"> <button>Meist</button> </Link>
       <Link to="/kontakt"> <button>Kontakt</button> </Link>

@@ -6,7 +6,7 @@
   text-align: center;
   display: inline-block;
   font-size: 16px;
-   }
+}
 .nupp:hover {
   height: 50px;
   font-size: 16px;
@@ -15,8 +15,9 @@
   text-align: center;
   cursor: grab;
 }
-.pilt {
+.main-picture {
   width: 50%;
   height: 50%;
+  margin-left: 25%;
   border-radius: 10px;
 }
