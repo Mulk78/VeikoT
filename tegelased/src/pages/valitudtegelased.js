@@ -1,6 +1,6 @@
 function valitudtegelased() {
     return ( 
-        <div></div>
+        <div>VT</div>
      );
 }
 

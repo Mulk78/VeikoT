@@ -1,5 +1,8 @@
 import './App.css';
 import { Link, Route, Routes } from 'react-router-dom'
+import Avaleht from './pages/avaleht';
+import Lisategelane from './pages/lisategelane';
+import Valitudtegelased from './pages/valitudtegelased'
 
 function App() {
   return (
@@ -9,9 +12,9 @@ function App() {
       <Link to="/valitudtegelased"><button>Valitud tegelased</button></Link>
       <img className= "main-picture" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Disney-logo.jpg" alt="" />
       <Routes>
-        <Route path="" exact element= { <div>Avaleht</div> } />
-        <Route path="lisategelane" exact element= { <div>Lisa tegelane</div> } />
-        <Route path="valitudtegelased" exact element= { <div>Valitud tegelased</div> } />
+        <Route path=""element= { <Avaleht/> } />
+        <Route path="lisategelane" element= { < Lisategelane/> } />
+        <Route path="valitudtegelased" exact element= { <Valitudtegelased/> } />
       </Routes>
     </div>
   );
