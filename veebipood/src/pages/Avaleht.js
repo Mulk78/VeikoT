@@ -2,7 +2,7 @@ import { useState } from "react"
 
 
 function Avaleht() {
-const [kogus, muudaKogus] = useState(8); //numbriline
+const [kogus, muudaKogus] = useState(0); //numbriline
 const [sonum, muudaSonum] = useState(""); //sõnaline
 const [laigitud, muudaLaigitud] = useState(true); //kahendväärtus
 
