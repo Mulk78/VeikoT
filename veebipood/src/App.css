@@ -1,8 +1,15 @@
 .pilt{
-  height: 300px;
-  width: 500px;
+  height: 20%;
+  width: 20%;
 }
 
 .nupp{
   background-color: coral;
+}
+
+.rectangle {
+  height: 5px;
+  width: 385px;
+  background-color: black;
+  margin-left: 50px auto;
 }

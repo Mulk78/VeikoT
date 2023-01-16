@@ -7,17 +7,20 @@ const toodeViide = useRef(); // toodeRef --- läheb inputide külge
 
 function lisa () {
   if (toodeViide.current.value === "") {
-    muudaSonum("Sa ei saa tõhja nimega uut toodet sisestada!")
+    muudaSonum("Toode sisestamata!")
   } else {
-    muudaSonum ("Toode ilusti lisatud!")
+    muudaSonum ("Toode lisatud!")
   }
   }
 
   return (
     <div>
+      <br />
       <div>{sonum}</div>
-      <label>Toote nimi</label><br />
+      <br />
       <input ref={toodeViide} type="text" /><br />
+      <label>Toote nimi</label> <br />
+      <br />
       <button onClick={lisa} >Lisa</button>
     </div>
   )

@@ -23,7 +23,7 @@ return ( <div>
     <div>Turu 2, Tartu</div>
     
 <br />
-<div> Kuidas muuta kursorit, kui see asetub muudetava väärtuse peale?</div>
+
 
 </div> );
 }
