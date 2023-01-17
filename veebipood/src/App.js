@@ -23,6 +23,11 @@ function App() {
       muudaSonum("Vale parool!");
     }
   }
+  const logiValja = () => {
+    muudaSisselogitud("ei");
+    muudaSonum ("Oled välja logitud");
+    }  
+  
 
   return (
     <div className="App">
@@ -35,7 +40,7 @@ function App() {
       </div> }
 
       { sisselogitud === "ei" && <button onClick={logiSisse} >Logi sisse</button>}
-      { sisselogitud === "jah" &&<button onClick={ () => muudaSisselogitud("ei") } >Logi välja</button>}
+      { sisselogitud === "jah" && <button onClick={logiValja} >Logi välja</button>}
       <br />
       <br />
       <div>Joone all on varasem kodutöö</div>
