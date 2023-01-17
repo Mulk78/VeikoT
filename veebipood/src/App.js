@@ -5,11 +5,43 @@ import Lisatoode from"./pages/Lisatoode";
 import Ostukorv from"./pages/Ostukorv";
 import Meist from"./pages/Meist";
 import Seaded from"./pages/Seaded";
+import { useState } from 'react';
+import { useRef } from 'react';
 
 
 function App() {
+  const [sisselogitud, muudaSisselogitud]=useState ("ei");
+  const [sonum, muudaSonum] = useState ("");
+  const KasutajaNimiRef = useRef ();
+  const paroolRef = useRef ();
+
+  const logiSisse = () => {
+    if (paroolRef.current.value = "123"){
+      muudaSisselogitud("jah");
+      muudaSonum(kasutajaNimi.current.value + ",Oled sisse logitud");
+    }else{
+      muudaSonum("Vale parool");
+    }
+  }
+
   return (
     <div className="App">
+      <div>{sonum}</div>
+      {sisselogitud === "ei" && <div>
+      <label>Kasutajanimi</label><br />
+      <input ref={KasutajaNimiRef} type="text" /><br />
+      <label>Parool</label><br />
+      <input ref={paroolRef}  type="password" /><br />
+      </div> }
+
+      { sisselogitud === "ei" && <button onClick={logiSisse} >Logi sisse</button>}
+      { sisselogitud === "jah" &&<button onClick={ () => muudaSisselogitud("ei") } >Logi välja</button>}
+      <br />
+      <br />
+      <div>Joone all on varasem kodutöö</div>
+      <br />
+      <div className="rectangle"></div>
+      <br />
       <Link to="/">
       <img className="pilt"src="https://www.luckydaycompetitions.com/wp-content/uploads/2022/04/image00004-3-1024x768.jpeg" alt="" />
       </Link>
