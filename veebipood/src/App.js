@@ -18,7 +18,7 @@ function App() {
   const logiSisse = () => {
     if (paroolRef.current.value = "123"){
       muudaSisselogitud("jah");
-      muudaSonum(kasutajaNimi.current.value + ",Oled sisse logitud");
+      muudaSonum(KasutajaNimiRef.current.value+" ,oled sisse logitud!");
     }else{
       muudaSonum("Vale parool");
     }
