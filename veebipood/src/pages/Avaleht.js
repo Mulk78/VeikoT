@@ -20,9 +20,9 @@ muudaSonum("Panid nulli");
 }
   return (
     <div>
+      <br />
       { laigitud === true && <img onClick={() => muudaLaigitud(false)} src="/laigitud.svg" alt="" />}
       { laigitud === false && <img onClick={() => muudaLaigitud(true)} src="/mittelaigitud.svg" alt="" />}
-      <button onClick={() => muudaLaigitud(!laigitud)}>Muuda</button>
       <div>{sonum}</div>
       {kogus > 0 && <button onClick={nulli}>Tagasi nulli</button>}
       <br />

@@ -16,18 +16,18 @@ function App() {
   const paroolRef = useRef ();
 
   const logiSisse = () => {
-    if (paroolRef.current.value = "123"){
+    if (paroolRef.current.value === "123"){
       muudaSisselogitud("jah");
-      muudaSonum(KasutajaNimiRef.current.value+" ,oled sisse logitud!");
+      muudaSonum(KasutajaNimiRef.current.value + " ,oled sisse logitud!");
     }else{
-      muudaSonum("Vale parool");
+      muudaSonum("Vale parool!");
     }
   }
 
   return (
     <div className="App">
       <div>{sonum}</div>
-      {sisselogitud === "ei" && <div>
+      {sisselogitud === "ei" && <div><br />
       <label>Kasutajanimi</label><br />
       <input ref={KasutajaNimiRef} type="text" /><br />
       <label>Parool</label><br />
