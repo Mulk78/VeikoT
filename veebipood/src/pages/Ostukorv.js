@@ -2,7 +2,8 @@
 
 function Ostukorv() {
   return (
-    <div>Ostukorv</div>
+    <div>Ostukorv.</div> 
+    
   )
 }
 

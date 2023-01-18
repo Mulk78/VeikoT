@@ -38,7 +38,7 @@ function App() {
       <label>Parool</label><br />
       <input ref={paroolRef}  type="password" /><br />
       </div> }
-
+      <br />
       { sisselogitud === "ei" && <button onClick={logiSisse} >Logi sisse</button>}
       { sisselogitud === "jah" && <button onClick={logiValja} >Logi välja</button>}
       <br />
@@ -54,16 +54,16 @@ function App() {
       <div className="rectangle"></div>
       <br />
       <Link to="/ostukorv">
-       <button classname="nupp">Ostukorvi</button>
+       <button className="nupp">Ostukorvi</button>
       </Link>
       <Link to="/lisatoode">
-        <button classname="nupp">Toodet lisama</button>
+        <button className="nupp">Toodet lisama</button>
       </Link>
       <Link to="/Meist">
-        <button classname="nupp">Meist</button>
+        <button className="nupp">Meist</button>
       </Link>
       <Link to="/Seaded">
-        <button classname="nupp">Seaded</button>
+        <button className="nupp">Seaded</button>
       </Link>
       
 

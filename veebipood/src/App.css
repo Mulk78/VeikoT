@@ -1,15 +1,21 @@
 .pilt{
-  height: 20%;
-  width: 20%;
-}
-
-.nupp{
-  background-color: coral;
+  height: 25%;
+  width: 385px;
 }
 
 .rectangle {
   height: 5px;
   width: 385px;
-  background-color: black;
+  background-color: darkgrey;
   margin-left: 50px auto;
+}
+
+.red {
+  color: red;
+}
+.blue {
+  color: rgb(26, 26, 94);
+}
+.nupp:hover {
+  font-size: bold;
 }
