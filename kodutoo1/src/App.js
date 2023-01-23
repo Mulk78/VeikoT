@@ -8,8 +8,11 @@ import Kontakt from './pages/kontakt';
 function App() {
   return (
     <div className="App">
+      <br />
       <button className='nupp'>VEIKO KODUTÖÖ 1</button>
+      <br /><br />
       <img className="main-picture"src="https://www.luckydaycompetitions.com/wp-content/uploads/2022/04/image00004-3-1024x768.jpeg" alt="" />
+      <br /><br />
       <Link to="/"> <button>Avalehele</button></Link>
       <Link to="/meist"> <button>Meist</button> </Link>
       <Link to="/kontakt"> <button>Kontakt</button> </Link>

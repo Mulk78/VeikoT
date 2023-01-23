@@ -1,6 +1,7 @@
 function Avaleht() {
     return ( <div>
-    <div>See on avaleht</div>
+        <br />
+    <div>See on avaleht</div><br />
     <div>Kuidas muuta pildi asukohta nii, et nupud jääksid soovitud kohta?</div>
     </div> );
 }

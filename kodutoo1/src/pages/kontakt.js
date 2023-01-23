@@ -18,7 +18,7 @@ const English = () => {
     <div> {telefon} </div>
     <div> {email} </div><br />
     <button onClick={English} >English</button>
-    { ingliseKeelne == "true" && <div>In English <br /> Muutuja "võrdub-ei võrdu" käib ka läbi kahe võrdusmärgi</div> }
+    { ingliseKeelne == "true" && <div>In English</div> }
     </div> );
 }
 
