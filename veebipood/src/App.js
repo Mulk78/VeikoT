@@ -5,8 +5,10 @@ import Lisatoode from"./pages/Lisatoode";
 import Ostukorv from"./pages/Ostukorv";
 import Meist from"./pages/Meist";
 import Seaded from"./pages/Seaded";
+import Poed from './pages/Poed';
 import { useState } from 'react';
 import { useRef } from 'react';
+
 
 
 function App() {
@@ -65,6 +67,9 @@ function App() {
       <Link to="/Seaded">
         <button className="nupp">Seaded</button>
       </Link>
+      <Link to="/Poed">
+        <button className="nupp">Poed</button>
+      </Link>
       
 
     <Routes>
@@ -73,6 +78,7 @@ function App() {
       <Route path="lisatoode" element= { <Lisatoode/>}/>
       <Route path="meist" element= { <Meist/>}/>
       <Route path="seaded" element= { <Seaded/>}/>
+      <Route path="poed" element= { <Poed/>}/>
     </Routes>
 <br />
 <div>FOOTER</div>
