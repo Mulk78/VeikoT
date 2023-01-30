@@ -6,6 +6,9 @@ import Ostukorv from"./pages/Ostukorv";
 import Meist from"./pages/Meist";
 import Seaded from"./pages/Seaded";
 import Poed from './pages/Poed';
+import Books from "./pages/Books";
+import Test from "./pages/test";
+import Numbrid from './pages/Numbrid';
 import { useState } from 'react';
 import { useRef } from 'react';
 
@@ -70,6 +73,15 @@ function App() {
       <Link to="/Poed">
         <button className="nupp">Poed</button>
       </Link>
+      <Link to="/Books">
+        <button className="nupp">Books</button>
+      </Link>
+      <Link to="/Numbrid">
+        <button className='nupp'>Numbrid</button>
+      </Link>
+      <Link to="/test">
+        <button className='nupp'>Test area</button>
+        </Link>
       
 
     <Routes>
@@ -79,9 +91,12 @@ function App() {
       <Route path="meist" element= { <Meist/>}/>
       <Route path="seaded" element= { <Seaded/>}/>
       <Route path="poed" element= { <Poed/>}/>
+      <Route path="books" element= { <Books/>}/>
+      <Route path="test" element= { <Test/>}/>
+      <Route path="numbrid" element= { <Numbrid/>}/>
     </Routes>
 <br />
-<div>FOOTER</div>
+<div>Veiko veebipood</div>
     </div>
   );
 }
