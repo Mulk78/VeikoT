@@ -2,25 +2,16 @@ import { useRef, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 
 function Seaded() {
-   const [keel, uuendakeel] = useState (localStorage.getItem("keel") || "EE" );
+   const [keel, uuendaKeel] = useState (localStorage.getItem("keel") || "EE" );
    const emailViide = useRef ();
    const telefonViide = useRef();
    const aadressViide = useRef();
    
    // sama, mis function muudaKeel () {}
-const muudaKeelEE = () => {
-    uuendakeel ("EE");
-    // localStorage salvestab brauseri lokaalmällu selle seade
-    localStorage.setItem("keel" , "EE");
-   }
-const muudaKeelEN = () => {
-    uuendakeel ("EN");
-    localStorage.setItem("keel" , "EN");
-       }
-const muudaKeelRU = () => {
-    uuendakeel ("RU");
-    localStorage.setItem("keel" , "RU");
-}
+    const muudakeel = (uusKeel) => {
+        uuendaKeel(uusKeel);
+        localStorage.setItem("keel", uusKeel);
+    }
     const salvestaEmail = () => {
     localStorage.setItem("email", emailViide.current.value );
     emailViide.current.value = "";
@@ -54,9 +45,9 @@ const muudaKeelRU = () => {
         <input ref={aadressViide} type="text" />
         <button onClick={salvestaAadress}>Sisesta</button>
         <br /><br />
-        <button onClick={muudaKeelEE} >Eesti</button>
-        <button onClick={muudaKeelEN} >English</button>
-        <button onClick={muudaKeelRU} >Russian</button>
+        <button onClick={()=> muudakeel("EE")} >Eesti</button>
+        <button onClick={()=> muudakeel("EN")} >English</button>
+        <button onClick={()=> muudakeel("RU")} >Russian</button>
         <br />
         {keel === "EE" && <div>Leht on eesti keeles</div>}
         {keel === "EN" && <div>Page in in english</div>}

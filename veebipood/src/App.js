@@ -7,11 +7,10 @@ import Meist from"./pages/Meist";
 import Seaded from"./pages/Seaded";
 import Poed from './pages/Poed';
 import Books from "./pages/Books";
-import Test from "./pages/test";
 import Numbrid from './pages/Numbrid';
+import Hinnad from "./pages/Hinnad"
 import { useState } from 'react';
 import { useRef } from 'react';
-
 
 
 function App() {
@@ -79,9 +78,10 @@ function App() {
       <Link to="/Numbrid">
         <button className='nupp'>Numbrid</button>
       </Link>
-      <Link to="/test">
-        <button className='nupp'>Test area</button>
-        </Link>
+      <Link to="/hinnad">
+        <button className='nupp'>Hinnad</button>
+      </Link>
+      
       
 
     <Routes>
@@ -92,8 +92,8 @@ function App() {
       <Route path="seaded" element= { <Seaded/>}/>
       <Route path="poed" element= { <Poed/>}/>
       <Route path="books" element= { <Books/>}/>
-      <Route path="test" element= { <Test/>}/>
       <Route path="numbrid" element= { <Numbrid/>}/>
+      <Route path="hinnad" element= { <Hinnad/>}/>
     </Routes>
 <br />
 <div>Veiko veebipood</div>

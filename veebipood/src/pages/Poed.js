@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 function Poed() {
     const [poed, uuendaPoed] =  useState(["Ülemiste", "Viimsi", "Rocca", "Magistral", "Vesse", "Kristiine", "Järveotsa"]);
@@ -57,10 +57,22 @@ function Poed() {
         const tulem = poed.map( e => e.replaceAll("i", "o"));
         uuendaPoed(tulem);
     }
-    
+    const kustuta = (index) => {
+        poed.splice(index,1);
+        uuendaPoed(poed.slice())
+    }
+    const nimiViide = useRef();
+    const lisa = () => {
+        poed.push(nimiViide.current.value);
+        uuendaPoed(poed.slice())
+    }
   return (
 <div>
     <br />
+    <label>Uue poe nimi</label><br />
+        <input ref={nimiViide} type="text" /><br />
+        <button onClick={lisa}>Sisesta</button><br /><br />
+        
     <button onClick={tagasiOriginaali}>Reset all filters</button>
     <button onClick={()=> uuendaPoed ([])}>Kustuta kõik</button><br />
     <button onClick={sorteeriAZ}>Sorteeri A-Z</button>
@@ -79,7 +91,7 @@ function Poed() {
     <br /><br />
     <div> Poode on {poed.length} tk </div>
     <br />
-{poed.map(e=> <div>{e} </div> )}
+{poed.map((e,i)=> <div key= {i}>{e}<button onClick={ () => kustuta (i) } >X</button> </div> )}
     <div>--------------</div>
     <div>Ülemiste</div>
     <div>Viimsi</div>

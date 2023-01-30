@@ -2,8 +2,9 @@ import { useState } from "react"
 
 
 function Numbrid() {
-const [numbers, muudaNumbrid] = useState (["4","23","7","39","19","0","17","14","2","45"])
-const nulliFiltrid = ()=> { muudaNumbrid(["4","23","7","39","19","0","17","14","2","45"])}
+const [numbers, muudaNumbrid] = useState ([4,23,7,39,19,0,17,14,2,45])
+const nulliFiltrid = ()=> { muudaNumbrid([4,23,7,39,19,0,17,14,2,45])
+}
 const esimeneNumber = ()=> {numbers.sort((a,b)=>a.localeCompare(b));
     muudaNumbrid(numbers.slice());
 }
@@ -40,7 +41,6 @@ const Jaga3 = ()=> {
     const tulem = numbers.map(e => e/3 );
     muudaNumbrid(tulem);
 }
-//vale tehe. kui lisada 10, siis paneb igale väärtusele lõppu 10 juurde. 4+10=410 jne
 const Liida10 = ()=> {
     const tulem = numbers.map(e => e+10 );
     muudaNumbrid(tulem);
@@ -51,7 +51,7 @@ const Lahuta1 = ()=> {
 }
 return (
 <div>Numbrid
-<br />
+<br /> 
 <button onClick={esimeneNumber} >Esimene nr väiksemast suuremaks</button>
 <button onClick={RevEsimeneNumber} >Esimene nr suuremast väiksemaks</button>
 <button onClick={NumKasv} >Numbri suuruse järgi kasvavalt</button>

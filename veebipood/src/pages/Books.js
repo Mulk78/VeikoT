@@ -19,7 +19,7 @@ function Books() {
      }
      //Sõnade arvu ei oska paika seadistada
     const SonadeArv =()=> { 
-        books.sort((a,b)=>a.charAt(1).localeCompare(b.charAt(2)));
+        books.filter(e=> e.length === 2);
         uuendaBooks(books.slice());
      }
      const ThegaAlgavad = () => { 
@@ -47,7 +47,14 @@ function Books() {
         const tulem = books.map( e => e.toLowerCase());
         uuendaBooks(tulem);
     }
-    //Ei suuda kuidagi välja mõelda seda "lisa ." ja "lisa ! "
+    const Punkt = () => {
+      const tulem = books.map( e => e + ".");
+      uuendaBooks(tulem);
+  }
+  const Hyyu = () => {
+   const tulem = books.map( e => e + "!");
+   uuendaBooks(tulem);
+}
    
     return (
     <div>
@@ -65,8 +72,8 @@ function Books() {
         <br />
         <button onClick={KoikV2ikseks}>Kõik väikesed tähed</button>
         <button onClick={KoikSuureks}>Kõik suured tähed</button>
-        <button>Punkt lõppu</button>
-        <button>! lõppu</button><br />
+        <button onClick={Punkt}>Punkt lõppu</button>
+        <button onClick={Hyyu}>! lõppu</button><br />
         <br />
         {books.map(e=> <div>{e} </div> )} 
 <br /><br />
