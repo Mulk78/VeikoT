@@ -11,6 +11,10 @@ import Numbrid from './pages/Numbrid';
 import Hinnad from "./pages/Hinnad"
 import { useState } from 'react';
 import { useRef } from 'react';
+import YksikToode from './pages/YksikToode';
+import HaldaTooteid from './pages/HaldaTooteid';
+import MuudaToode from './pages/MuudaToode';
+import Tooted from './pages/tooted';
 
 
 function App() {
@@ -69,6 +73,7 @@ function App() {
       <Link to="/Seaded">
         <button className="nupp">Seaded</button>
       </Link>
+      <br />
       <Link to="/Poed">
         <button className="nupp">Poed</button>
       </Link>
@@ -78,10 +83,16 @@ function App() {
       <Link to="/Numbrid">
         <button className='nupp'>Numbrid</button>
       </Link>
-      <Link to="/hinnad">
+      <br />
+      <Link to="/Tooted">
+        <button className='nupp'>Tooted</button>
+      </Link>
+      <Link to="/Hinnad">
         <button className='nupp'>Hinnad</button>
       </Link>
-      
+           <Link to="/Haldatooteid">
+        <button className='nupp'>Halda tooteid</button>
+      </Link>
       
 
     <Routes>
@@ -94,6 +105,10 @@ function App() {
       <Route path="books" element= { <Books/>}/>
       <Route path="numbrid" element= { <Numbrid/>}/>
       <Route path="hinnad" element= { <Hinnad/>}/>
+      <Route path="tooted" element= { <Tooted/>}/>
+      <Route path="yksiktoode" element= { <YksikToode/>}/>
+      <Route path="haldatooteid" element= { <HaldaTooteid/>}/>
+      <Route path="muudatoode" element= { <MuudaToode/>}/>
     </Routes>
 <br />
 <div>Veiko veebipood</div>

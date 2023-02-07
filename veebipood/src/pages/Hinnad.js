@@ -49,7 +49,7 @@ function Hinnad() {
 
   return (
     <div>
-        
+        <br />
         <button onClick={Suurenda}>Suurenda 1 võrra</button>
         <button onClick={V2henda}>Vähenda 1 võrra</button>
         <button onClick={suuremEnne}>Sorteeri suurem enne</button>
