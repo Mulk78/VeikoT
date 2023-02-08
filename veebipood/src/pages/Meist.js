@@ -2,8 +2,8 @@ import { useState} from "react"
 
 function Meist() {
   const [n2itaEmail, uuendaN2itaEmaili] = useState(false);
-  const [telefon, uuendaTelefoni] = useState (localStorage.getItem("telefon"));
-  const [aadress, uuendaAadressi] = useState (localStorage.getItem("aadress"));
+  const [telefon, uuendaTelefoni] = useState (localStorage.getItem("telefon")) || "";
+  const [aadress, uuendaAadressi] = useState (localStorage.getItem("aadress")) || "";
 
   return (
     <div>

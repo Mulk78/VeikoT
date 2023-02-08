@@ -14,7 +14,7 @@ import { useRef } from 'react';
 import YksikToode from './pages/YksikToode';
 import HaldaTooteid from './pages/HaldaTooteid';
 import MuudaToode from './pages/MuudaToode';
-import Tooted from './pages/tooted';
+import Tooted from './pages/Tooted';
 
 
 function App() {
@@ -105,7 +105,7 @@ function App() {
       <Route path="books" element= { <Books/>}/>
       <Route path="numbrid" element= { <Numbrid/>}/>
       <Route path="hinnad" element= { <Hinnad/>}/>
-      <Route path="tooted" element= { <Tooted/>}/>
+      <Route path="Tooted" element= { <Tooted/>}/>
       <Route path="yksiktoode" element= { <YksikToode/>}/>
       <Route path="haldatooteid" element= { <HaldaTooteid/>}/>
       <Route path="muudatoode" element= { <MuudaToode/>}/>

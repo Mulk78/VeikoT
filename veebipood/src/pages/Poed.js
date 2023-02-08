@@ -91,7 +91,10 @@ function Poed() {
     <br /><br />
     <div> Poode on {poed.length} tk </div>
     <br />
-{poed.map((e,i)=> <div key= {i}>{e}<button onClick={ () => kustuta (i) } >X</button> </div> )}
+{poed.map((e,i)=> 
+<div key= {i}>
+    {e}
+    <button onClick={ () => kustuta (i) } >X</button> </div> )}
     <div>--------------</div>
     <div>Ülemiste</div>
     <div>Viimsi</div>
