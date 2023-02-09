@@ -32,7 +32,7 @@ function Seaded() {
     <div>
         <br />
         <label>"E-mail"</label>
-        <input ref={emailViide} type="text" />
+        <input ref={emailViide} defaultValue= {localStorage.getItem("email")} type="text" />
         <button onClick={salvestaEmail}>Sisesta</button>
         <br />
         <br />

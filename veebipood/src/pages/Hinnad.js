@@ -46,6 +46,12 @@ function Hinnad() {
         hinnad.splice(index,1);
         uuedHinnad(hinnad.slice())
     }
+    const arvutaNumbridKokku = () => {
+        console.log("Arvutatud!");
+        let summa = 0;
+        hinnad.forEach(hind => summa = summa + hind);
+        return hinnad.reduce((a,b) => a+b,0 );
+    }
 
   return (
     <div>
@@ -64,7 +70,7 @@ function Hinnad() {
 {hinnad.map((element, index) => <button key={index} onClick = { () => kustuta (index)} > {element} </button> )}
 <br /><br />
 <button onClick={nulliFiltrid} >Reset</button>
-        
+<div>Kokku : {arvutaNumbridKokku()} </div>        
     </div>
   )
 }

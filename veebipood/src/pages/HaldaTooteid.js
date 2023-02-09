@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 function HaldaTooteid() {
   const [tooted, uuendaTooted] = useState(JSON.parse(localStorage.getItem("tooted")) || [] );
@@ -14,7 +15,9 @@ function HaldaTooteid() {
       <div key={jrkNr}>
        {toode}
        <button onClick={ ()=> kustuta (jrkNr)}>Kustuta</button>
+       <Link to= {"/muudatoode/" + jrkNr}>
        <button>Muuda</button>
+       </Link>
       </div> )};
     </div>
   )
