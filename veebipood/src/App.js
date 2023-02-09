@@ -106,9 +106,9 @@ function App() {
       <Route path="numbrid" element= { <Numbrid/>}/>
       <Route path="hinnad" element= { <Hinnad/>}/>
       <Route path="Tooted" element= { <Tooted/>}/>
-      <Route path="yksiktoode" element= { <YksikToode/>}/>
+      <Route path="yksiktoode/ : index" element= { <YksikToode/>}/>
       <Route path="haldatooteid" element= { <HaldaTooteid/>}/>
-      <Route path="muudatoode" element= { <MuudaToode/>}/>
+      <Route path="muudatoode/:jrkNr" element= { <MuudaToode/>}/>
     </Routes>
 <br />
 <div>Veiko veebipood</div>
