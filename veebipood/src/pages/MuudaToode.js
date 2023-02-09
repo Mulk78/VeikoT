@@ -8,7 +8,7 @@ const leitudToode = tooted[jrkNr];
 const nimiRef = useRef ();
 const navigate = useNavigate();
 const muuda = () => {
-  tooted [jrkNr] = nimiRef.current.value;
+  tooted[jrkNr] = nimiRef.current.value;
   localStorage.setItem ("tooted", JSON.stringify(tooted));
 navigate("/haldatooteid");
 }

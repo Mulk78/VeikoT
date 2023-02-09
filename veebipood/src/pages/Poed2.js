@@ -1,86 +1,76 @@
 import { useRef, useState } from "react";
-import poedFailist from "../poed.json";
 
 function Poed() {
-    const [poed, uuendaPoed] =  useState(poedFailist);
+    const [poed, uuendaPoed] =  useState(["Ülemiste", "Viimsi", "Rocca", "Magistral", "Vesse", "Kristiine", "Järveotsa"]);
     const tagasiOriginaali = ()=> {
-        uuendaPoed(poedFailist);
+        uuendaPoed(["Ülemiste", "Viimsi", "Rocca", "Magistral", "Vesse", "Kristiine", "Järveotsa"]);
     }
     const sorteeriAZ = ()=>{
-        poed.sort((a,b) => a.nimi.localeCompare(b.nimi) );
+        poed.sort();
         uuendaPoed(poed.slice()); //võimalik asendada  uuendaPoed([...poed]);
     }
     const sorteeriZA = ()=>{
-        poed.sort((a,b)=>b.nimi.localeCompare(a.nimi));
+        poed.sort((a,b)=>b.localeCompare(a));
         uuendaPoed(poed.slice());
     }
     const sorteeriT2htKasv = ()=>{
-        poed.sort((a,b)=>a.nimi.length - b.nimi.length);
+        poed.sort((a,b)=>a.length - b.length);
         uuendaPoed(poed.slice());
     }
     const sorteeriT2htKah = ()=>{
-        poed.sort((a,b)=>b.nimi.length - a.nimi.length);
+        poed.sort((a,b)=>b.length - a.length);
         uuendaPoed(poed.slice());
     }
     const sorteeriTeineT2ht = ()=>{
-        poed.sort((a,b) => a.nimi.charAt(1).localeCompare(b.nimi.charAt(1)));
+        poed.sort((a,b) => a.charAt(1).localeCompare(b.charAt(1)));
         uuendaPoed(poed.slice())
     }
     const filtreeriELoppevad = () => {
-        const tulem = poed.filter( e => e.nimi.endsWith("e"));
+        const tulem = poed.filter( e => e.endsWith("e"));
         uuendaPoed(tulem);
     }
     const filtreeriRohkemKui8T2hemärki = () => {
-        const tulem = poed.filter( e => e.nimi.length >8);
+        const tulem = poed.filter( e => e.length >8);
         uuendaPoed(tulem);
     }
     const filtreeri9T2hemärki = () => {
-        const tulem = poed.filter( e => e.nimi.length === 9);
+        const tulem = poed.filter( e => e.length === 9);
         uuendaPoed(tulem);
     }
     const filtreeriKolmasT2htI = () => {
-        const tulem = poed.filter( e => e.nimi.charAt(2) === "i");
+        const tulem = poed.filter( e => e.charAt(2) === "i");
         uuendaPoed(tulem);
     }
     const filtreeriSonasIS = () => {
-        const tulem = poed.filter( e => {return e.nimi.includes ("is")});
+        const tulem = poed.filter( e => e.includes ("is"));
         uuendaPoed(tulem);
     }
     const muudaKoikSuureks = () => {
-        const tulem = poed.map( e => {return{"nimi" : e.nimi.toUpperCase(), "aeg" : e.aeg }});
+        const tulem = poed.map( e => e.toUpperCase());
         uuendaPoed(tulem);
     }
     const muudaKoikV2ikseks = () => {
-        const tulem = poed.map(e => {return{ "nimi":  e.nimi.toLowerCase(), "aeg" : e.aeg}});
+        const tulem = poed.map( e => e.toLowerCase());
         uuendaPoed(tulem);
     }
     const MuudaIOks = () => {
-        const tulem = poed.map( e => {return { "nimi": e.nimi.replaceAll("i", "o"), "aeg":e.aeg}});
+        const tulem = poed.map( e => e.replaceAll("i", "o"));
         uuendaPoed(tulem);
-    }
-    const LisaT2htedeArvL6ppu = () => {
-        const tulem = poed.map(e => {return {"nimi" : e.nimi + e.nimi.length, "aeg" : e.aeg} } );
-        uuendaPoed(tulem)
     }
     const kustuta = (index) => {
         poed.splice(index,1);
         uuendaPoed(poed.slice())
     }
     const nimiViide = useRef();
-    const aegViide = useRef();
     const lisa = () => {
-        poed.push({ "nimi" : nimiViide.current.value, "aeg": aegViide.current.value});
-        uuendaPoed(poed.slice());
-        nimiViide.current.value = "";
-        aegViide.current.value = "";
+        poed.push(nimiViide.current.value);
+        uuendaPoed(poed.slice())
     }
   return (
 <div>
     <br />
     <label>Uue poe nimi</label><br />
         <input ref={nimiViide} type="text" /><br />
-        <label>Uue poe lahtiolekueg</label><br />
-        <input ref={aegViide} type="text" /><br />
         <button onClick={lisa}>Sisesta</button><br /><br />
         
     <button onClick={tagasiOriginaali}>Reset all filters</button>
@@ -98,16 +88,22 @@ function Poed() {
     <button onClick={muudaKoikSuureks}>Kõik suured tähed</button>
     <button onClick={muudaKoikV2ikseks}>Kõik väikesed tähed</button>
     <button onClick={MuudaIOks}>Asenda I O-ga</button>
-    <button onClick={LisaT2htedeArvL6ppu}>Tähtede arv</button>
     <br /><br />
     <div> Poode on {poed.length} tk </div>
     <br />
 {poed.map((e,i)=> 
 <div key= {i}>
-    {e.nimi} :
-    {e.aeg}
+    {e}
     <button onClick={ () => kustuta (i) } >X</button> </div> )}
-    </div>
+    <div>--------------</div>
+    <div>Ülemiste</div>
+    <div>Viimsi</div>
+    <div>Rocca</div>
+    <div>Magistral</div>
+    <div>Vesse</div>
+    <div>Kristiine</div>
+    <div>Järveotsa</div>
+</div>
   )
 
 }

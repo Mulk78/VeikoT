@@ -13,8 +13,11 @@ function HaldaTooteid() {
     <div>
       {tooted.map((toode, jrkNr) => 
       <div key={jrkNr}>
-       {toode}
-       <button onClick={ ()=> kustuta (jrkNr)}>Kustuta</button>
+        <div> {toode.nimi} </div>
+        <div> {toode.hind} </div>
+        <div> {toode.pilt} </div>
+        <div> {toode.aktiivne} </div>
+        <button onClick={ ()=> kustuta (jrkNr)}>Kustuta</button>
        <Link to= {"/muudatoode/" + jrkNr}>
        <button>Muuda</button>
        </Link>

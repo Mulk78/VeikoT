@@ -20,7 +20,10 @@ function Tooted() {                        // useState(["Google P1", "Iphone 12 
       {tooted.map((toode, jrkNr) => 
       <div key={jrkNr} >
       <Link to= {"/yksiktoode/" + jrkNr} >  
-        {toode} 
+        <div> {toode.nimi} </div>
+        <div> {toode.hind} </div>
+        <div> {toode.pilt} </div>
+        <div> {toode.aktiivne} </div>
       </Link>
       <button onClick={ () => lisaOstukorvi (toode) }>Lisa ostukorvi</button>
       </div> )}

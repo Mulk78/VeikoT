@@ -1,27 +1,11 @@
 import { useState } from "react";
 
 function Hinnad() {
-    const [hinnad, uuedHinnad] = useState
-        ([
-            { "nimi": "Coca", "hind" : 21, "valuuta": "EUR" , "alandatud":false },
-            { "nimi": "anta", "hind" : 12, "valuuta": "USD" , "alandatud":true },
-            { "nimi": "Vesi", "hind" : 99, "valuuta": "AUD" , "alandatud":false },
-            { "nimi": "Kali", "hind" : 74, "valuuta": "JPN" , "alandatud":true },
-            { "nimi": "Fuze", "hind" : 592, "valuuta": "PLN" , "alandatud":false },
-            { "nimi": "Limonaad", "hind" : 7, "valuuta": "GBP" , "alandatud":true },
-        ]);
-    const nulliFiltrid = ()=> { 
-        uuedHinnad([
-        { "nimi": "Coca", "hind" : 21, "valuuta": "EUR" , "alandatud":false },
-        { "nimi": "anta", "hind" : 12, "valuuta": "USD" , "alandatud":true },
-        { "nimi": "Vesi", "hind" : 99, "valuuta": "AUD" , "alandatud":false },
-        { "nimi": "Kali", "hind" : 74, "valuuta": "JPN" , "alandatud":true },
-        { "nimi": "Fuze", "hind" : 592, "valuuta": "PLN" , "alandatud":false },
-        { "nimi": "Limonaad", "hind" : 7, "valuuta": "GBP" , "alandatud":true },
-        ]);
+    const [hinnad, uuedHinnad] = useState ([21,12,99,74,592,7]);
+    const nulliFiltrid = ()=> { uuedHinnad([21,12,99,74,592,7])
     }
     const Suurenda = () => {
-        const tulem = hinnad.map(e => { return{...e, "hind": e.hind + 1 }});
+        const tulem = hinnad.map( e => e + 1 );
         uuedHinnad(tulem);
     }
     const Paaritud = () => {
@@ -29,7 +13,7 @@ function Hinnad() {
         uuedHinnad(tulem);
     }
     const V2henda = () => {
-        const tulem = hinnad.map(e => { return{...e, "hind": e.hind - 1 }});
+        const tulem = hinnad.map(e => e-1);
         uuedHinnad(tulem);
     }
     const suuremEnne = () => {
@@ -50,12 +34,12 @@ function Hinnad() {
         uuedHinnad(tulem);
     }
     const AtoZ = () => {
-        hinnad.sort((a,b)=> a.hind.toString().localeCompare(b.hind.toString()) );
+        hinnad.sort();
         uuedHinnad(hinnad.slice())
     }
     const ZtoA = () => {
-        hinnad.sort((a,b)=> b.hind.toString().localeCompare(a.hind.toString()));
-        
+        hinnad.sort();
+        hinnad.reverse();
         uuedHinnad(hinnad.slice())
     }
     const kustuta = (index) => {
@@ -64,7 +48,9 @@ function Hinnad() {
     }
     const arvutaNumbridKokku = () => {
         console.log("Arvutatud!");
-        return hinnad.reduce((summa, toode ) => summa + toode.hind, 0 );
+        let summa = 0;
+        hinnad.forEach(hind => summa = summa + hind);
+        return hinnad.reduce((a,b) => a+b,0 );
     }
 
   return (
@@ -81,10 +67,7 @@ function Hinnad() {
         <button onClick={ZtoA}>Sorteeri Z-A</button>
         <button onClick={Paaritud}>Näita paarituid</button>
         <br /><br />
-{hinnad.map((element, index) => 
-    <button key={index} onClick = { () => kustuta (index)} > 
-    {element.hind} 
-    </button> )}
+{hinnad.map((element, index) => <button key={index} onClick = { () => kustuta (index)} > {element} </button> )}
 <br /><br />
 <button onClick={nulliFiltrid} >Reset</button>
 <div>Kokku : {arvutaNumbridKokku()} </div>        
