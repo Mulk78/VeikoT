@@ -10,17 +10,17 @@ return ( <div>
     <br /> 
     <div>Võta meiega ühendust:</div>
     <br />
-    <div onClick={ () => muudaN2itaTelKristiine(!n2itaTelKristiine)}>Kristiine Keskus</div>
-    {n2itaTelKristiine && <div>123786439645762</div>}
-    <div>Endla 45</div>
+    <div className= {n2itaTelKristiine === true? "valitud" : undefined} onClick={ () => muudaN2itaTelKristiine(!n2itaTelKristiine)}>Kristiine Keskus</div>
+    {n2itaTelKristiine && <div className="valitud" >123786439645762</div>}
+    <div className= {n2itaTelKristiine === true? "valitud" : undefined } >Endla 45</div>
     <br />
-    <div onClick={ () => muudaN2itaTelYlemiste(!n2itaTelYlemiste)} >Ülemiste Keskus</div>
-    {n2itaTelYlemiste && <div>+372 512345</div>}
-    <div>Suur-Sõjamäe 4</div>
+    <div className= {n2itaTelYlemiste === true? "valitud" : undefined} onClick={ () => muudaN2itaTelYlemiste(!n2itaTelYlemiste)} >Ülemiste Keskus</div>
+    {n2itaTelYlemiste && <div className="valitud" >+372 512345</div>}
+    <div className= {n2itaTelYlemiste === true? "valitud" : undefined} >Suur-Sõjamäe 4</div>
     <br />
-    <div onClick={() => muudaN2itaTelTasku(!n2itaTelTasku)} >Tasku Keskus</div>
-    {n2itaTelTasku &&<div>22222222</div>}
-    <div>Turu 2, Tartu</div>
+    <div className= {n2itaTelTasku === true? "valitud" : undefined} onClick={() => muudaN2itaTelTasku(!n2itaTelTasku)} >Tasku Keskus</div>
+    {n2itaTelTasku &&<div className="valitud" >22222222</div>}
+    <div className= {n2itaTelTasku === true? "valitud" : undefined} >Turu 2, Tartu</div>
     
 <br />
 
