@@ -14,16 +14,23 @@ function Tooted() {                        // useState(["Google P1", "Iphone 12 
  // ostuKorvLS = JSON.stringify(ostukorv);
  // localStorage.setItem("ostukorv", ostuKorvLS);
 }
-
+const sorteeriAZ = ()=>{}
+const sorteeriZA = ()=>{}
+const sorteeriHindKasvav = ()=>{}
+const sorteeriHindKahanev = ()=>{}
   return (
-    <div><br />
-      {tooted.map((toode, jrkNr) => 
+    <div>
+      <button onClick={sorteeriAZ}>Sorteeri A-Z</button>
+      <button onClick={sorteeriZA}>Sorteeri Z-A</button>
+      <button onClick={sorteeriHindKasvav} >Sorteeri hind kasvav</button>
+      <button onClick={sorteeriHindKahanev} >Sorteeri hind kahanev</button>
+      {tooted.filter(e => e.aktiivne === true).map((toode, jrkNr) => 
       <div key={jrkNr} >
       <Link to= {"/yksiktoode/" + jrkNr} >  
         <div> {toode.nimi} </div>
         <div> {toode.hind} </div>
         <div> {toode.pilt} </div>
-        <div> {toode.aktiivne} </div>
+        {/*<div> {toode.aktiivne} </div>*/}
       </Link>
       <button onClick={ () => lisaOstukorvi (toode) }>Lisa ostukorvi</button>
       </div> )}

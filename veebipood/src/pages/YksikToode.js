@@ -10,7 +10,12 @@ const leitudToode = tooted[index];
 
   return (
     <div>
-      {leitudToode}
+      { leitudToode!== undefined && <div>
+      <div>{leitudToode.nimi}</div>
+      <div>{leitudToode.pilt}</div>
+      <div>{leitudToode.hind}</div>
+      <div>{leitudToode.aktiivne}</div>
+      </div>}
       {leitudToode === undefined && <div>Toodet ei leitud!</div>}
     </div>
   )

@@ -9,8 +9,8 @@ const hindRef = useRef();
 const piltRef = useRef();
 const aktiivneRef = useRef();
 
-function lisa () {
-  if (toodeViide.current.value === "") {
+function lisa ()  {
+  if (nimiRef.current.value === "") {
     muudaSonum("Toode sisestamata!")
   } else {
     muudaSonum ("Toode lisatud!" + nimiRef.current.value);
@@ -18,9 +18,9 @@ function lisa () {
     const tooted = JSON.parse(localStorage.getItem("tooted")||" [] ");  //võib panna peale sulgusid ka selle : ||[]
     const Lisatoode = {
       "nimi" : nimiRef.current.value,
-      "hind" : nimiRef.current.value,
-      "pilt" : nimiRef.current.value,
-      "aktiivne" : nimiRef.current.value,
+      "hind" : Number(hindRef.current.value),
+      "pilt" : piltRef.current.value,
+      "aktiivne" : aktiivneRef.current.checked,
     };
     tooted.push(Lisatoode);
 
@@ -34,6 +34,7 @@ function lisa () {
       <br />
       <div>{sonum}</div>
       <br />
+      <label Uue toote nimi></label>
       <input ref={nimiRef} type="text" /><br />
       <label>Toote nimi</label> <br />
       <input ref={hindRef} type="number" /><br />

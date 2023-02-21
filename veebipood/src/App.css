@@ -19,3 +19,13 @@
 .nupp:hover {
   font-size: bold;
 }
+.aktiivne {
+  border: 1px solid green;
+  background-color: rgb(226, 235, 226);
+  margin: 5px;
+}
+.mitteaktiivne {
+  border: 1px solid red;
+  background-color: rgb(243, 236, 236);
+  margin: 5px;
+}
