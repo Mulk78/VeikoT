@@ -1,7 +1,10 @@
 import { useParams , useNavigate, useState } from 'react'
 import {useRef} from 'react'
 import productsFromFile from "../../Pages/data/products.json"
+import categoriesFromFile from "../data/categories.json"
 import {Alert} from "@mui/material"
+import { TextField } from '@mui/material';
+
 
 
 function EditProduct() {
@@ -54,7 +57,9 @@ productsFromFile[index] = newProduct;
         <label htmlFor="">Image</label><br />
         <input ref={imageRef} type="text" defaultValue={productFound.image}/><br />
         <label htmlFor="">Category</label><br />
-        <input ref={categoryRef} type="text" defaultValue={productFound.category}/><br />
+        <select ref={categoryRef}>
+          {categoriesFromFile.map(element => <option key={element.name}>{element.name}</option> )}
+        </select>
         <label htmlFor="">Description</label><br />
         <input ref={descriptionRef} type="text" defaultValue={productFound.description}/><br />
         <label htmlFor="">Active</label><br />
@@ -67,7 +72,7 @@ productsFromFile[index] = newProduct;
 }
 
 export default EditProduct
-
+//<input ref={categoryRef} type="text" defaultValue={productFound.category}/><br />
 //1.ok muudan URLi vastuvõtlikkuse muutuja osas
 //2.ok Võimaldan kuskilt lehelt sinna URL-le sattuda, saates kaasa selle muutuja
 //3.ok Võtame useParams abil muutuja kasutusele (useParams osas import)
