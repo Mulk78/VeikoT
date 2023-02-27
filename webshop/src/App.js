@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link, Route, Routes} from 'react-router-dom'
 import Cart from "./Pages/Cart";
-import ContactUs from "./Pages/ContactUs";
+import {ContactUs} from "./Pages/ContactUs"; //selleks, et kasutada Email.js teenust, tuleb see import panna { } sisse
 import HomePage from "./Pages/HomePage";
 import Login from "./Pages/Login";
 import Shops from "./Pages/Shops";

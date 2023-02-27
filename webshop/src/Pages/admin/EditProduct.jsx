@@ -1,6 +1,7 @@
-import { useParams } from 'react-router-dom'
+import { useParams , useNavigate, useState } from 'react'
 import {useRef} from 'react'
-import productsFromFile from "../data/products.json"
+import productsFromFile from "../../Pages/data/products.json"
+import {Alert} from "@mui/material"
 
 
 function EditProduct() {
@@ -14,34 +15,53 @@ function EditProduct() {
   const categoryRef = useRef ();
   const descriptionRef = useRef ();
   const activeRef = useRef ();
+  const navigate = useNavigate();
 
   const changeProduct = () => {}
     const newProduct = {
-      "id" : idRef.current.value,
+      "id" : Number(idRef.current.value),
       "image" : imageRef.current.value,
       "name" : nameRef.current.value,
-      "price" : priceRef.current.value,
+      "price" : Number(priceRef.current.value),
       "description" : descriptionRef.current.value,
       "category" : categoryRef.current.value,
-      "active" : activeRef.current.value,
+      "active" : activeRef.current.checked,
     }
+    
+productsFromFile[index] = newProduct;
+    navigate("/admin/maintain-products");
+  const [isError , setError] = useState (false);
+
+  const checkIdUniqueness = () => {
+    const found = productsFromFile.find(element => element.id === Number(idRef.current.value));
+    if (found = undefined) {
+      setError(false);
+    } else {
+      setError(true);
+    }
+  }
+
   return (
     <div>
+      {isError === true &&  <Alert severity="error">Sisestatud ID on juba olemas!</Alert>}
+      {productFound!== undefined && <div>
       <label>ID</label><br />
-      <input ref={idRef} type="text" defaultValue={productFound.id} /> <br />
-      <label htmlFor="">Name</label><br />
-      <input ref={nameRef} type="text" defaultValue={productFound.name}/><br />
-      <label htmlFor="">Price EUR</label><br />
-      <input ref={priceRef} type="text" defaultValue={productFound.price}/> <br />
-      <label htmlFor="">Image</label><br />
-      <input ref={imageRef} type="text" defaultValue={productFound.image}/><br />
-      <label htmlFor="">Category</label><br />
-      <input ref={categoryRef} type="text" defaultValue={productFound.category}/><br />
-      <label htmlFor="">Description</label><br />
-      <input ref={descriptionRef} type="text" defaultValue={productFound.description}/><br />
-      <label htmlFor="">Active</label><br />
-      <input ref={activeRef} type="text" defaultValue={productFound.active}/><br />
-      <button onClick={changeProduct} >Change</button>
+        <input ref={idRef} onChange={checkIdUniqueness} type="number" defaultValue={productFound.id} /> <br />
+        <label htmlFor="">Name</label><br />
+        <input ref={nameRef} type="text" defaultValue={productFound.name}/><br />
+        <label htmlFor="">Price</label><br />
+        <input ref={priceRef} type="number" defaultValue={productFound.price}/> <br />
+        <label htmlFor="">Image</label><br />
+        <input ref={imageRef} type="text" defaultValue={productFound.image}/><br />
+        <label htmlFor="">Category</label><br />
+        <input ref={categoryRef} type="text" defaultValue={productFound.category}/><br />
+        <label htmlFor="">Description</label><br />
+        <input ref={descriptionRef} type="text" defaultValue={productFound.description}/><br />
+        <label htmlFor="">Active</label><br />
+        <input ref={activeRef} type="checkbox" defaultChecked={productFound.active}/><br />
+        <button onClick={changeProduct} disabled={isError=== true} >Change</button>
+     </div>}
+     {productFound === undefined && <div>Product not found!</div> }
     </div>
   )
 }
