@@ -1,10 +1,12 @@
 import Button from '@mui/material/Button';
+import { t } from 'i18next';
+import { Link } from 'react-router-dom'
 
 function Cart() {
   return (
     <div>
-      
-      <Button>Pealehele</Button>
+      <br />
+      <Button variant="outlined" as={Link} to="/" > {t("home-page")} </Button>
 
     </div>
   )

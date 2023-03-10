@@ -1,6 +1,7 @@
 import productsFromFile from "../data/products.json";
 import Button from '@mui/material/Button';
 import { useState } from "react";
+import categoriesFromFile from "../data/categories.json";
 
 function HomePage() {
   const [products, setProducts] = useState(productsFromFile);
@@ -33,6 +34,11 @@ function HomePage() {
 
   return (
     <div>
+      
+      {categoriesFromFile.map(element => 
+       <button key={element.name} onClick={()=>filterByCategory(element.name)} > {element.name} </button> )}
+<br /><br />
+
       <Button onClick={() => filterByCategory("guitar")} variant="outlined">Guitar</Button>
       <Button onClick={() => filterByCategory("drum")}  variant="outlined">Drum</Button>
       <Button onClick={sortAZ} variant="outlined">Sort A-Z</Button>

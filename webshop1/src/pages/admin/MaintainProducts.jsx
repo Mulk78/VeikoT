@@ -15,14 +15,16 @@ function MaintainProducts() {
     setProducts(productsFromFile.slice());
   }
   const searchFromProducts = () => {
-    const found = productsFromFile.filter( element => element.name.includes(searchedProductRef.current.value));
+    const found = productsFromFile.filter( element => 
+      element.name.toLowerCase().includes(searchedProductRef.current.value.toLowerCase()));
     setProducts(found);
   }
 
 
   return (
     <div>
-      <input ref={searchedProductRef} onChange={searchFromProducts} type="text" />
+      <input ref={searchedProductRef} onChange={searchFromProducts} type="text" /> 
+      <div> {products.length} toodet </div>
       {products.map(product => 
       <div key={product.id}>
         <img src= {product.image} alt="" />

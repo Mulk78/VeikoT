@@ -3,6 +3,7 @@ import {useParams , useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import productsFromFile from "../../data/products.json";
 import { useState } from 'react';
+import categoriesFromFile from "../../data/categories.json"
 import { Alert } from "@mui/material";
 
 function EditProduct() {
@@ -45,6 +46,7 @@ function EditProduct() {
     <div>
       {isError === true && <Alert severity="error" >Sisestatud ID on juba olemas!</Alert>}
       {productFound!== undefined && <div>
+        <br />
         <input ref={idRef} onChange={checkIdUniqueness} type="number" defaultValue={productFound.id} />
         <label>ID</label><br />
         <input ref={nameRef} type="text" defaultValue={productFound.name} />
@@ -53,7 +55,10 @@ function EditProduct() {
         <label>Price</label><br />
         <input ref={imageRef} type="text" defaultValue={productFound.image} />
         <label>Image</label><br />
-        <input ref={categoryRef} type="text" defaultValue={productFound.category} />
+        {/*<input ref={categoryRef} type="text" defaultValue={productFound.category} /> */}
+        <select ref={categoryRef} >
+          {categoriesFromFile.map(element => <option> {element.name} </option> )}
+        </select><br />
         <label>Category</label><br />
         <input ref={descriptionRef} type="text" defaultValue={productFound.description} />
         <label>Description</label><br />

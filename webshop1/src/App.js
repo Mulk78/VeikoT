@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Cart from "./pages/Cart";
-import ContactUs from "./pages/ContactUs";
+import {ContactUs} from "./pages/ContactUs";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import Shops from "./pages/Shops";

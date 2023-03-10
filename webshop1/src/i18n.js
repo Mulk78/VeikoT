@@ -15,6 +15,7 @@ const resources = {
       "maintain-products" : "Maintain products",
       "maintain-categories" : "Maintain categories",
       "maintain-shops" : "Maintain shops",
+      "home-page" : "To home page"
     }
   },
   ee: {
@@ -27,6 +28,7 @@ const resources = {
       "maintain-products" : "Halda tooteid",
       "maintain-categories" : "Halda kategooriaid",
       "maintain-shops" : "Halda poode",
+      "home-page" : "Pealehele"
     }
   }
 };
