@@ -1,0 +1,23 @@
+[debug] [2023-04-20T11:44:35.661Z] ----------------------------------------------------------------------
+[debug] [2023-04-20T11:44:35.664Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Tauri\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-04-20T11:44:35.665Z] CLI Version:   11.24.1
+[debug] [2023-04-20T11:44:35.665Z] Platform:      win32
+[debug] [2023-04-20T11:44:35.665Z] Node Version:  v18.12.1
+[debug] [2023-04-20T11:44:35.667Z] Time:          Thu Apr 20 2023 14:44:35 GMT+0300 (Ida-Euroopa suveaeg)
+[debug] [2023-04-20T11:44:35.667Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-20T11:44:35.791Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-20T11:44:35.792Z] > authorizing via signed-in user (taalveiko@gmail.com)
+[debug] [2023-04-20T11:44:35.792Z] [iam] checking project vtwebshop2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-20T11:44:35.796Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vtwebshop2:testIamPermissions [none]
+[debug] [2023-04-20T11:44:35.797Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vtwebshop2:testIamPermissions x-goog-quota-user=projects/vtwebshop2
+[debug] [2023-04-20T11:44:35.797Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vtwebshop2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-20T11:44:39.069Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vtwebshop2:testIamPermissions 200
+[debug] [2023-04-20T11:44:39.070Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vtwebshop2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-20T11:44:39.071Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vtwebshop2 [none]
+[debug] [2023-04-20T11:44:51.333Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/vtwebshop2
+[debug] [2023-04-20T11:44:54.109Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/vtwebshop2
+    at RetryOperation._fn (C:\Users\Tauri\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project vtwebshop2. Please make sure the project exists and your account has permission to access it.

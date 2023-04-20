@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site" : "vtwebshop2",
+    "site":"vtwebshop2",
     "public": "build",
     "ignore": [
       "firebase.json",

@@ -20,16 +20,9 @@ function MaintainCategories() {
   }
   return (
     <div>
-      <br />
-      Millegipärast see Textfield lahendus ei tööta nii nagu peaks. <br /><br />
-      <TextField label="New category" ref={categoryRef} type="text" ></TextField>
-      <br />
-      <Button variant="outline-dark" onClick={addCategory} >Add category</Button>
-
-      <br /><br /><br />
-      <label>Uus kategooria</label><br />
-      <input ref={categoryRef} type="text" /> <br />
-      <Button variant="outline-dark" onClick={addCategory} >Add category</Button>
+      <label>Uus kategooria nimi</label><br />
+      <input ref={categoryRef} type="text" /> <br /><br />
+      <Button variant="outline-dark" onClick={addCategory} >Add category</Button> <br /><br />
       {categories.map((element, index) => (
         <div key={index}> 
           {element.name} <Button variant="outline-dark" onClick={() => deleteCategory(index)} >Delete</Button> 
