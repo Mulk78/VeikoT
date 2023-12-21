@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.nupu-stiil {
+  font-weight: bold;
+  color:red; 
+}
+
+.nupu-stiil:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nupu-stiil:active {
+  background-color: black;
+}
+.pilt {
+  width: 200px;
+  /*height: 200px;*/ 
+}
+
+.pilt:hover {
+ opacity: 0.5;
+ cursor: pointer;
+}
+
+.pilt:active {
+transform: rotate(-10deg) ;
+}
