@@ -4,16 +4,16 @@
 
 .nupu-stiil {
   font-weight: bold;
-  color:red; 
+  color:rgb(0, 0, 0); 
 }
 
 .nupu-stiil:hover {
-  text-decoration: underline;
+  opacity: 0.5;
   cursor: pointer;
 }
 
 .nupu-stiil:active {
-  background-color: black;
+  background-color: gray;
 }
 .pilt {
   width: 200px;
