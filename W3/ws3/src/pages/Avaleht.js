@@ -11,9 +11,9 @@ function Avaleht() {
 
       <br /><br />
       
-      <button className="nupu-stiil">-</button>
+      <button className="nupu-stiil"> - </button>
       <span> 7 </span>
-      <button className="nupu-stiil">+</button>
+      <button className="nupu-stiil"> + </button>
     </div>
   )
 }
