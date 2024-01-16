@@ -28,3 +28,12 @@
 .pilt:active {
 transform: rotate(-10deg) ;
 }
+.kuldne {
+  color: goldenrod  
+}
+.tume {
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 100vh;
+}

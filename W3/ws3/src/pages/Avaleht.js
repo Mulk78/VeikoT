@@ -16,12 +16,12 @@ function Avaleht() {
     uuendaKogus(kogus +1 );
     uuendaSonum("Suurendatud!");
   }
-
+  console.log("printisin HTMLi");
   return (
     <div>
       <div> {sonum} </div>
       {laigitud === false && <img src="/syda mitteliketud.svg" alt="" />}
-      {laigitud === true && <img src="/syda liketud.svg" alt="" />}
+      {laigitud === true && <img src="/syda liketud.svg" alt="" />} <br />
       {kogus > 10 && <img src="/syda kuldne.svg" alt="" />}
       <button className="nupu-stiil" onClick={()=>muudaLaigitud(true)} >Pane liketuks</button>
       <button className="nupu-stiil" onClick={()=>muudaLaigitud(false)} >Pane mitteliketud</button>
@@ -30,7 +30,7 @@ function Avaleht() {
       {kogus !== 0 && <button className="nupu-stiil" onClick={nulli} > Nulli </button>}
       <br />
       <button disabled = {kogus === 0} className="nupu-stiil" onClick={vahenda} > - </button>
-      <span> {kogus} </span>
+      <span className={kogus > 10 ? "kuldne" : undefined } > {kogus} </span>
       <button className="nupu-stiil" onClick={suurenda} > + </button>
     </div>
   )
